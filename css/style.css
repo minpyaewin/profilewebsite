@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /*height: 500vh;*/
+}
+
+.site-nav{
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+.site-nav-scroll{
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #000;
+    animation: toShow 1s linear;
+}
+@keyframes toShow {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.nav-link{
+    padding: 0.5rem 1.3rem !important;
+}
+.nav-link.current-section{
+    border: 2px solid #ffffff;
+    border-radius: 10em;
+    padding: 0.5rem 1.3rem!important;
+}
+.site-nav-scroll .nav-link{
+    color: #1A129F!important;
+}
+.site-nav-scroll .nav-link.current-section{
+    border: 2px solid #1A129F;
+    border-radius: 10em;
+    padding: 0.5rem 1.3rem!important;
+}
+.site-nav-scroll .menu-icon{
+    color: #1A129F;
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+header{
+
+}
+.site-logo{
+    width: 150px;
+}
+
+.home{
+    background-image: url("../img/bg-shape.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%;
+    position: relative;
+}
+
+.scroll-to-next{
+    width: 50px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: 50px;
+    /*border: 1px solid black;*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-v{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    bottom: 100px;
+}
+
+.social-v a{
+    transition: 0.5s;
+}
+.social-v a:hover{
+    transform: scale(1.2);
+}
+
+.social-icon a{
+    transition: 0.5s;
+}
+.social-icon a:hover{
+    transform: scale(1.3);
+}
+
+.about{
+    background: #7E76F910;
+}
+.about-text{
+    background-image: url("../img/bg-2.svg");
+    background-size: 100%;
+    background-position: center;
+}
+
+.services{
+    background-image: url("../img/bg-3.svg");
+    background-size: 100%;
+    background-position: center;
+}
+
+.services-card{
+    border-radius: 35px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;;
+    transition: 0.5s;
+}
+.services-card:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;;
+    transform: scale(0.98);
+}
+.services-card img{
+    transition: 0.5s;
+}
+.services-card:hover img{
+    transform: scale(1.3) translateX(80px);
+}
+.services-card-des{
+    height: 150px;
+}
+
+.pricing{
+    background: #7E76F915;
+}
+
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent;
+    border: 2px solid #7E76F9;
+    border-radius: 50%;
+}
+.slick-dots li.slick-active{
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #7E76F9;
+}
+
+.contact{
+    background-image: url("../img/footer-1.svg"),url("../img/footer-2.svg");
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    /*height: 350px;*/
+    /*padding: 150px 0px 0px 0px;*/
+    background-attachment: fixed;
+    background-position: bottom;
+}
+.footer{
+    padding-top: 150px;
+}
+
+.ani-delay-1{
+    animation-delay: 0.5s;
+}
+.ani-delay-2{
+    animation-delay: 1s;
+}
+.ani-delay-3{
+    animation-delay: 1.5s;
+}
+.ani-delay-4{
+    animation-delay: 2s;
+}
+.ani-delay-5{
+    animation-delay: 2.5s;
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .nav-link.current-section{
+        border: 2px solid #1A129F;
+        border-radius: 10em;
+        padding: 0.5rem 1.3rem!important;
+    }
+
+    .content-2,.content-2-text{
+        width: 100% !important;
+    }
+
+    .site-nav{
+        background-color: #ffffffee;
+        backdrop-filter: blur(55px);
+        box-shadow: 0 0 5px #00000015;
+    }
+
+    .site-nav .menu-icon{
+        color: #1A129F!important;
+    }
+    .site-nav .nav-link{
+        color: #1A129F!important;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        background-color: #f6f5fe;
+        border-radius: 35px;
+        box-shadow: 0 0 15px #00000015;
+    }
+    .navbar-nav{
+        padding-top: 20px;
+    }
+
+    .footer{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .scroll-to-next{
+        bottom: 15px;
+        left: auto;
+        right: 20px;
+    }
+
+    .social-v{
+        bottom: 100px;
+        left: auto;
+        right: 15px;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+
+    .nav-link.current-section{
+        border: 2px solid #1A129F;
+        border-radius: 10em;
+        padding: 0.5rem 1.3rem!important;
+    }
+
+    .site-nav{
+        background-color: #ffffffee;
+        backdrop-filter: blur(75px);
+        box-shadow: 0 0 5px #00000015;
+    }
+
+    .site-nav .menu-icon{
+        color: #1A129F!important;
+    }
+    .site-nav .nav-link{
+        color: #1A129F!important;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        background-color: #f6f5fe;
+        border-radius: 35px;
+        box-shadow: 0 0 5px #00000015;
+    }
+    .navbar-nav{
+        padding-top: 20px;
+    }
+    .contact{
+        background-size: auto 80%;
+    }
+}
